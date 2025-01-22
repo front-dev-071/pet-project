@@ -1,9 +1,9 @@
 import { Dog, Cat, Cow, Developer } from "./animal/Animal.js";
 
-const dog = new Dog();
-const cat = new Cat();
-const cow = new Cow();
-const developer = new Developer();
+const dog = new Dog("Шарик");
+const cat = new Cat("Мурка");
+const cow = new Cow("Бурёнка");
+const developer = new Developer("Вовочка");
 
 const buttons = document.querySelector(".animals__buttons");
 
@@ -14,19 +14,19 @@ const devButton = buttons.querySelector("#devButton");
 
 const voiceContainer = document.getElementById("voiceContainer");
 
-function showAnimalVoice(animal, name) {
-	voiceContainer.textContent = animal.speak(name);
+function showAnimalVoice(animal) {
+	voiceContainer.textContent = animal.speak();
 }
 
 dogButton.addEventListener("click", () => {
-	showAnimalVoice(dog, "Шарик");
+	showAnimalVoice(dog);
 });
 catButton.addEventListener("click", () => {
-	showAnimalVoice(cat, "Мурка");
+	showAnimalVoice(cat);
 });
 cowButton.addEventListener("click", () => {
-	showAnimalVoice(cow, "Бурёнка");
+	showAnimalVoice(cow);
 });
 devButton.addEventListener("click", () => {
-	showAnimalVoice(developer, "Вовочка");
+	showAnimalVoice(developer);
 });
