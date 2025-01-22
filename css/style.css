@@ -32,7 +32,6 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0;
 }
 
 /* Grouping content
@@ -188,7 +187,8 @@ button {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -207,11 +207,11 @@ button,
 [type=reset],
 [type=submit] {
   /**
-   * Remove the inner border and padding in Firefox.
-   */
+    * Remove the inner border and padding in Firefox.
+    */
   /**
-   * Restore the focus styles unset by the previous rule.
-   */
+    * Restore the focus styles unset by the previous rule.
+    */
 }
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
@@ -260,8 +260,8 @@ input {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
   /**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
+    * Remove the inner padding in Chrome and Safari on macOS.
+    */
 }
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -347,6 +347,10 @@ template {
 .title {
   width: 100%;
   text-align: center;
+}
+
+.text {
+  margin: 0.5rem 0;
 }
 
 .animals {
