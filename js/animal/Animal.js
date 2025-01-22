@@ -1,4 +1,4 @@
-class Animal {
+export class Animal {
 	static count = 0;
 
 	constructor(name = "Jonh Doe", voice) {
@@ -7,6 +7,10 @@ class Animal {
 
 		Animal.count++;
 	}
+
+	static countAnimals() {
+		return Animal.count;
+}
 
 	speak() {
 		return `${this.name} говорит «${this.voice}»`;
