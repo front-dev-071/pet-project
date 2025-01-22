@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/front-dev-071/pet-project/issues"
   },
-  "homepage": "https://github.com/front-dev-071/pet-project#readme"
+  "homepage": "https://github.com/front-dev-071/pet-project#readme",
+  "dependencies": {
+    "normalize-scss": "^8.0.0"
+  }
 }
