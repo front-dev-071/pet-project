@@ -1,4 +1,4 @@
-import {Animal, Dog, Cat, Cow, Developer } from "./animal/Animal.js";
+import { Animal, Dog, Cat, Cow, Developer } from "./AnimalClass";
 
 const dog = new Dog("Шарик");
 const cat = new Cat("Мурка");
