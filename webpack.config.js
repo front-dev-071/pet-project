@@ -63,7 +63,7 @@ module.exports = {
 	devServer: {
 		static: path.resolve(__dirname, "dist"), // Папка для статических файлов
 		hot: true, // Включаем HMR
-		open: true, // Открывает браузер при запуске
+		// open: true, // Открывает браузер при запуске
 		watchFiles: ["src/**/*"], // Следит за изменениями в src/
 		liveReload: true, // Включает быструю перезагрузку для случаев, когда HMR не срабатывает
 	},

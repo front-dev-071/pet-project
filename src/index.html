@@ -9,16 +9,17 @@
 
 	<body>
 		<div class="container">
-			<h1 class="title">Отрабатываем технологии</h1>
+			<h1 class="title h1">Отрабатываем технологии</h1>
 		</div>
 
 		<span class="border-between-sections"></span>
 
+		<!-- Классы  -->
 		<div class="container">
-			<h2 class="title">JS. Классы</h2>
+			<h2 class="title h2 h2_pet">JS. Классы</h2>
 
 			<div class="animals">
-				<h3>Выбери тотемное животное</h3>
+				<h3 class="h3">Выбери тотемное животное</h3>
 
 				<div class="animals__buttons">
 					<button id="dogButton">Собака</button>
@@ -34,72 +35,77 @@
 
 		<span class="border-between-sections"></span>
 
-		<div class="container">
-			<h2 class="title">Форма + IMask</h2>
+		<!-- Форма  -->
+		<h2 class="title h2 h2_pet">Форма + IMask</h2>
 
-			<div class="form__section">
-				<div class="form__image-container">
-					<img src="/img/form/form-image.png" alt="Интерьер" />
-				</div>
+		<section class="form__section">
+			<div class="form__image-container">
+				<img src="/img/form/form-image.png" alt="Интерьер" />
+			</div>
 
-				<div class="form__container">
-					<h2 class="text-uppercase">Узнайте условия работы:</h2>
+			<div class="form__container">
+				<div class="form__container-top">
+					<h2 class="h2 text-uppercase">Узнайте условия работы:</h2>
 
 					<p class="text-uppercase">Мы отправим письмо на ваш e-mail</p>
-
-					<form class="form" id="contactForm">
-						<input
-							class="form__input"
-							id="name"
-							type="text"
-							name="name"
-							required
-							pattern="[a-zA-Zа-яА-ЯёЁ\s]{3,10}"
-							title="Введите Ваше имя"
-							placeholder="Имя"
-						/>
-
-						<input
-							class="form__input"
-							id="email"
-							type="email"
-							name="email"
-							required
-							title="Введите Ваш E-mail"
-							placeholder="E-mail"
-						/>
-
-						<input
-							class="form__input"
-							id="phoneNumber"
-							type="text"
-							name="phoneNumber"
-							required
-							title="Введите Ваш номер телефона"
-							placeholder="+7"
-						/>
-
-						<input
-							class="form__input"
-							id="cooperation"
-							type="text"
-							name="cooperation"
-							maxlength="150"
-							placeholder="Тип сотрудничества"
-						/>
-
-						<button class="form__submit-button text-uppercase" type="submit">
-							Отправить
-							<img src="/img/form/right-arrow-icon.svg" alt="Стрелочка" />
-						</button>
-					</form>
-					<p class="form__disclaimer">
-						Нажимая на кнопку, вы даете согласие на обработку персональных
-						данных и соглашаетесь с политикой конфиденциальности.
-					</p>
 				</div>
+
+				<form class="form" id="contactForm" novalidate>
+					<input
+						class="form__input"
+						id="username"
+						type="text"
+						name="username"
+						required
+						pattern="[a-zA-Zа-яА-ЯёЁ\s]{3,10}"
+						title="Введите Ваше имя"
+						placeholder="Имя"
+					/>
+					<span class="username-error form__input-error"></span>
+
+					<input
+						class="form__input"
+						id="email"
+						type="email"
+						name="email"
+						required
+						title="Введите Ваш E-mail"
+						placeholder="E-mail"
+					/>
+					<span class="email-error form__input-error"></span>
+
+					<input
+						class="form__input"
+						id="phoneNumber"
+						type="text"
+						name="phoneNumber"
+						required
+						title="Введите Ваш номер телефона"
+						placeholder="+7"
+					/>
+					<span class="phone-number-error form__input-error"></span>
+
+					<input
+						class="form__input"
+						id="cooperation"
+						type="text"
+						name="cooperation"
+						maxlength="150"
+						placeholder="Тип сотрудничества"
+					/>
+					<span class="form__input-error"></span>
+
+					<button class="form__submit-button text-uppercase" type="submit">
+						Отправить
+						<img src="/img/form/right-arrow-icon.svg" alt="Стрелочка" />
+					</button>
+				</form>
+				<p class="form__disclaimer">
+					Нажимая «Отправить», я соглашаюсь с Договором оферты Cosmorelax и даю
+					согласие на информационные и маркетинговые коммуникации.
+				</p>
 			</div>
-		</div>
+		</section>
 
 		<span class="border-between-sections"></span>
 

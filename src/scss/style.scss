@@ -1,14 +1,27 @@
-@import "./normalize/normalize";
+// @import "./normalize/normalize";
+@import "./normalize";
 @import "./base";
 @import "./vars";
 
-//* Общие классы *//
-// .container {
-// 	width: 100%;
-// 	max-width: 1400px;
-// 	margin: 0 auto;
-// 	padding: 0 100px;
-// }
+// * Общие классы *//
+
+.h2_pet {
+	margin-bottom: 50px;
+}
+
+.h1 {
+	font-size: 47px;
+}
+
+.h2 {
+	font-size: 45px;
+	line-height: 110%;
+}
+
+.h3 {
+	font-size: 30px;
+	line-height: 110%;
+}
 
 .title {
 	width: 100%;
@@ -16,7 +29,7 @@
 }
 
 .text {
-	margin: 0.25rem 0;
+	font-size: 18px;
 }
 
 .text-uppercase {
@@ -31,7 +44,7 @@
 	background-color: black;
 }
 
-//* Животные *//
+//* JS Классы. Животные *//
 
 .animals {
 	display: flex;
@@ -48,27 +61,42 @@
 //* Форма *//
 
 .form__section {
-	height: 555px;
+	max-height: 555px;
+	height: 100%;
 	display: flex;
 	gap: 70px;
 }
-
 
 .form {
 	display: flex;
 	flex-direction: column;
 
+	&__section {
+		justify-content: space-between;
+	}
+
 	&__container {
-		width: 50%;
+		flex: 1;
+		padding-right: 130px;
+		padding-top: 20px;
+	}
+
+	&__container-top {
+		margin-bottom: 55px;
+
+		h2 {
+			margin-bottom: 23px;
+		}
 	}
 
 	&__image-container {
-		width: 45%;
+		max-width: 690px;
+		width: 100%;
 
 		img {
 			width: 100%;
 			height: auto;
-			border-radius: 10px;
+			// border-radius: 10px;
 		}
 	}
 
@@ -97,14 +125,30 @@
 		border: none;
 		border-bottom: 1px solid #ccc;
 		padding: 8px 0;
+		// margin-bottom: 0;
+			margin-bottom: 38px;
 
 		&:focus {
 			outline: none;
 			border-bottom-color: #888;
 		}
 
-		&:not(:last-child) {
-			margin-bottom: 38px;
+		// &:not(:last-child) {
+		// 	margin-bottom: 38px;
+		// }
+
+		&:last-of-type {
+			margin-bottom: 47px;
+		}
+	}
+
+	&__input-error {
+		height: 10px;
+	}
+
+	&__input-type {
+		&_error {
+			color: red;
 		}
 	}
 
