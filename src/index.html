@@ -51,19 +51,22 @@
 				</div>
 
 				<form class="form" id="contactForm" novalidate>
-					<input
-						class="form__input"
-						id="username"
-						type="text"
-						name="username"
-						required
-						pattern="[a-zA-Zа-яА-ЯёЁ\s]{3,10}"
-						title="Введите Ваше имя"
-						placeholder="Имя"
-					/>
-					<span class="username-error form__input-error"></span>
+					<label class="form__label" for="username">
+						<input
+							class="form__input"
+							id="username"
+							type="text"
+							name="username"
+							required
+							pattern="[a-zA-Zа-яА-ЯёЁ\s]{3,10}"
+							title="Введите Ваше имя"
+							placeholder="Имя"
+						/>
+						<span class="username-error form__input-error"></span>
+					</label>
 
-					<input
+					<label class="form__label" for="email">
+						<input
 						class="form__input"
 						id="email"
 						type="email"
@@ -71,31 +74,36 @@
 						required
 						title="Введите Ваш E-mail"
 						placeholder="E-mail"
-					/>
-					<span class="email-error form__input-error"></span>
+						/>
+						<span class="email-error form__input-error"></span>
+					</label>
 
-					<input
+					<label class="form__label" for="phonenumber">
+						<input
 						class="form__input"
-						id="phoneNumber"
+						id="phonenumber"
 						type="text"
-						name="phoneNumber"
+						name="phonenumber"
 						required
 						title="Введите Ваш номер телефона"
 						placeholder="+7"
-					/>
-					<span class="phone-number-error form__input-error"></span>
-
-					<input
+						/>
+						<span class="phonenumber-error form__input-error"></span>
+					</label>						
+						
+					<label class="form__label" for="cooperation">
+						<input
 						class="form__input"
 						id="cooperation"
 						type="text"
 						name="cooperation"
-						maxlength="150"
+						maxlength="100"
 						placeholder="Тип сотрудничества"
-					/>
-					<span class="form__input-error"></span>
-
-					<button class="form__submit-button text-uppercase" type="submit">
+						/>
+						<span class="cooperation-error form__input-error"></span>
+					</label>
+						
+						<button class="form__submit-button form__submit-button_valid text-uppercase" type="submit">
 						Отправить
 						<img src="/img/form/right-arrow-icon.svg" alt="Стрелочка" />
 					</button>
