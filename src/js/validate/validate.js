@@ -1,3 +1,6 @@
+import { INCORRECT_PHONE, INCORRECT_EMAIL } from "../../utils/informMessages";
+import { EMAIL_REGEXP } from "../../constants/regexp";
+
 function showInputError(formElement, inputElement, config) {
 	const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
 
@@ -15,28 +18,30 @@ function hideInputError(formElement, inputElement, config) {
 }
 
 function checkInputValidity(formElement, inputElement, config) {
+	if (inputElement.id === "email") {
+		const isValid = EMAIL_REGEXP.test(inputElement.value);
+
+		if (!isValid) {
+			inputElement.setCustomValidity(INCORRECT_EMAIL);
+		} else {
+			inputElement.setCustomValidity("");
+		}
+	}
+
 	if (inputElement.id === "phonenumber") {
-			if (!inputElement.mask.masked.isComplete) {
-					inputElement.setCustomValidity("Введите номер телефона полностью");
-			} else {
-					inputElement.setCustomValidity("");
-			}
+		if (!inputElement.mask.masked.isComplete) {
+			inputElement.setCustomValidity(INCORRECT_PHONE);
+		} else {
+			inputElement.setCustomValidity("");
+		}
 	}
 
 	if (inputElement.validity.valid) {
-			hideInputError(formElement, inputElement, config);
+		hideInputError(formElement, inputElement, config);
 	} else {
-			showInputError(formElement, inputElement, config);
+		showInputError(formElement, inputElement, config);
 	}
 }
-
-// function checkInputValidity(formElement, inputElement, config) {
-// 	if (inputElement.validity.valid) {
-// 		hideInputError(formElement, inputElement, config);
-// 	} else {
-// 		showInputError(formElement, inputElement, config);
-// 	}
-// }
 
 function hasInvalidInput(inputList) {
 	return inputList.some((inputElement) => !inputElement.validity.valid);

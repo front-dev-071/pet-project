@@ -60,18 +60,16 @@
 
 //* Форма *//
 
-.form__section {
-	max-height: 555px;
-	height: 100%;
-	display: flex;
-	gap: 70px;
-}
-
 .form {
 	display: flex;
 	flex-direction: column;
 
 	&__section {
+		// max-height: 555px;
+		min-height: 555px;
+		height: 100%;
+		display: flex;
+		gap: 70px;
 		justify-content: space-between;
 	}
 
