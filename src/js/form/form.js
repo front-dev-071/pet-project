@@ -21,7 +21,8 @@ const validationConfig = {
 const form = document.querySelector('.form');
 const userNameInput = document.querySelector('#username');
 const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#phonenumber');
+const phoneNumberInput = document.querySelector('#phonenumber');
+const cooperationInput = document.querySelector('#cooperation');
 
 function handleSubmit(evt) {
   evt.preventDefault();
@@ -29,7 +30,8 @@ function handleSubmit(evt) {
   console.log({
     username: userNameInput.value,
     email: emailInput.value,
-    password: passwordInput.value,
+    phonenumber: phoneNumberInput.value,
+		cooperation: cooperationInput.value
   })
 
 	alert("Форма отправлена!");
