@@ -58,7 +58,7 @@
 							type="text"
 							name="username"
 							required
-							pattern="[a-zA-Zа-яА-ЯёЁ\s]{3,10}"
+							pattern="[a-zA-Zа-яА-ЯёЁ\s]{2,30}"
 							title="Введите Ваше имя"
 							placeholder="Имя"
 						/>
@@ -67,43 +67,45 @@
 
 					<label class="form__label" for="email">
 						<input
-						class="form__input"
-						id="email"
-						type="email"
-						name="email"
-						required
-						title="Введите Ваш E-mail"
-						placeholder="E-mail"
+							class="form__input"
+							id="email"
+							type="email"
+							name="email"
+							required
+							title="Введите Ваш E-mail"
+							placeholder="E-mail"
 						/>
 						<span class="email-error form__input-error"></span>
 					</label>
 
 					<label class="form__label" for="phonenumber">
 						<input
-						class="form__input"
-						id="phonenumber"
-						type="text"
-						name="phonenumber"
-						required
-						title="Введите Ваш номер телефона"
-						placeholder="+7"
+							class="form__input"
+							id="phonenumber"
+							type="text"
+							name="phonenumber"
+							title="Введите Ваш номер телефона"
+							placeholder="+7"
 						/>
 						<span class="phonenumber-error form__input-error"></span>
-					</label>						
-						
+					</label>
+
 					<label class="form__label" for="cooperation">
 						<input
-						class="form__input"
-						id="cooperation"
-						type="text"
-						name="cooperation"
-						maxlength="100"
-						placeholder="Тип сотрудничества"
+							class="form__input"
+							id="cooperation"
+							type="text"
+							name="cooperation"
+							maxlength="100"
+							placeholder="Тип сотрудничества"
 						/>
 						<span class="cooperation-error form__input-error"></span>
 					</label>
-						
-						<button class="form__submit-button form__submit-button_valid text-uppercase" type="submit">
+
+					<button
+						class="form__submit-button form__submit-button_valid text-uppercase"
+						type="submit"
+					>
 						Отправить
 						<img src="/img/form/right-arrow-icon.svg" alt="Стрелочка" />
 					</button>

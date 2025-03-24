@@ -9,34 +9,35 @@ const mask = IMask(phoneElement, maskOptions);
 
 //* Валидация *//
 const validationConfig = {
-  formSelector: '.form',
-  inputSelector: '.form__input',
-  submitButtonSelector: '.form__submit-button',
-  activeButtonClass: 'form__submit-button_valid',
-  inactiveButtonClass: 'form__submit-button_invalid',
-  inputErrorClass: 'form__input_type_error',
-  errorClass: 'form__input-error_visible'
+	formSelector: ".form",
+	inputSelector: ".form__input",
+	submitButtonSelector: ".form__submit-button",
+	activeButtonClass: "form__submit-button_valid",
+	inactiveButtonClass: "form__submit-button_invalid",
+	inputErrorClass: "form__input_type_error",
+	errorClass: "form__input-error_visible",
 };
 
-const form = document.querySelector('.form');
-const userNameInput = document.querySelector('#username');
-const emailInput = document.querySelector('#email');
-const phoneNumberInput = document.querySelector('#phonenumber');
-const cooperationInput = document.querySelector('#cooperation');
+enableValidation(validationConfig);
+
+//* Отправка формы *//
+const form = document.querySelector(".form");
+const userNameInput = document.querySelector("#username");
+const emailInput = document.querySelector("#email");
+const phoneNumberInput = document.querySelector("#phonenumber");
+const cooperationInput = document.querySelector("#cooperation");
 
 function handleSubmit(evt) {
-  evt.preventDefault();
+	evt.preventDefault();
 
-  console.log({
-    username: userNameInput.value,
-    email: emailInput.value,
-    phonenumber: phoneNumberInput.value,
-		cooperation: cooperationInput.value
-  })
+	console.log({
+		username: userNameInput.value,
+		email: emailInput.value,
+		phonenumber: phoneNumberInput.value,
+		cooperation: cooperationInput.value,
+	});
 
 	alert("Форма отправлена!");
 }
 
-form.addEventListener('submit', handleSubmit);
-
-enableValidation(validationConfig);
+form.addEventListener("submit", handleSubmit);

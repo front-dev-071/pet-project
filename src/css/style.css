@@ -169,6 +169,7 @@ p {
   color: white;
   background-color: rgb(29, 29, 29);
   opacity: 0.2;
+  cursor: default;
 }
 .form__label {
   width: 100%;

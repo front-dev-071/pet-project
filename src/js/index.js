@@ -11,5 +11,5 @@ import "./animal/animal";
 import "./form/form";
 
 if (module.hot) {
-  module.hot.accept();
+	module.hot.accept();
 }
