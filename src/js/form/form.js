@@ -1,11 +1,16 @@
 import IMask from "imask";
-
 import { enableValidation } from "../validate/validate";
 
 //* IMask *//
 const phoneElement = document.getElementById("phonenumber");
 const maskOptions = { mask: "+{7}(000)000-00-00" };
 const mask = IMask(phoneElement, maskOptions);
+
+console.log('Маска раз', mask);
+
+phoneElement.mask = mask;
+
+console.log('Маска два', mask);
 
 //* Валидация *//
 const validationConfig = {

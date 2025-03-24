@@ -15,12 +15,28 @@ function hideInputError(formElement, inputElement, config) {
 }
 
 function checkInputValidity(formElement, inputElement, config) {
+	if (inputElement.id === "phonenumber") {
+			if (!inputElement.mask.masked.isComplete) {
+					inputElement.setCustomValidity("Введите номер телефона полностью");
+			} else {
+					inputElement.setCustomValidity("");
+			}
+	}
+
 	if (inputElement.validity.valid) {
-		hideInputError(formElement, inputElement, config);
+			hideInputError(formElement, inputElement, config);
 	} else {
-		showInputError(formElement, inputElement, config);
+			showInputError(formElement, inputElement, config);
 	}
 }
+
+// function checkInputValidity(formElement, inputElement, config) {
+// 	if (inputElement.validity.valid) {
+// 		hideInputError(formElement, inputElement, config);
+// 	} else {
+// 		showInputError(formElement, inputElement, config);
+// 	}
+// }
 
 function hasInvalidInput(inputList) {
 	return inputList.some((inputElement) => !inputElement.validity.valid);
